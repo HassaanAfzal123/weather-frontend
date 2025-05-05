@@ -8,7 +8,7 @@ function App() {
   const [selectedCity, setSelectedCity] = useState('new-york');
 
   useEffect(() => {
-    fetch(`/api/weather/${selectedCity}`)
+    fetch(`https://weather-backend-nffx.onrender.com/${selectedCity}`)
       .then(res => res.json())
       .then(data => setWeather(data));
   }, [selectedCity]);
